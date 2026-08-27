@@ -1,0 +1,167 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct Student
+{
+    int rollNo;
+    string name;
+    float marks;
+};
+
+void addStudent(Student students[], int &count)
+{
+    if (count >= 100)
+    {
+        cout << "Student limit reached!\n";
+        return;
+    }
+
+    cout << "\nEnter Roll Number: ";
+    cin >> students[count].rollNo;
+
+    cin.ignore();
+
+    cout << "Enter Name: ";
+    getline(cin, students[count].name);
+
+    cout << "Enter Marks: ";
+    cin >> students[count].marks;
+
+    count++;
+
+    cout << "Student added successfully!\n";
+}
+
+void displayStudents(Student students[], int count)
+{
+    if (count == 0)
+    {
+        cout << "\nNo students available.\n";
+        return;
+    }
+
+    cout << "\n===== Student List =====\n";
+
+    for (int i = 0; i < count; i++)
+    {
+        cout << "\nRoll No: " << students[i].rollNo;
+        cout << "\nName: " << students[i].name;
+        cout << "\nMarks: " << students[i].marks;
+        cout << "\n------------------------";
+    }
+}
+
+void searchStudent(Student students[], int count)
+{
+    int roll;
+    cout << "\nEnter Roll Number to search: ";
+    cin >> roll;
+
+    for (int i = 0; i < count; i++)
+    {
+        if (students[i].rollNo == roll)
+        {
+            cout << "\nStudent Found!\n";
+            cout << "Roll No: " << students[i].rollNo << endl;
+            cout << "Name: " << students[i].name << endl;
+            cout << "Marks: " << students[i].marks << endl;
+            return;
+        }
+    }
+
+    cout << "\nStudent not found!\n";
+}
+
+void updateMarks(Student students[], int count)
+{
+    int roll;
+    cout << "\nEnter Roll Number: ";
+    cin >> roll;
+
+    for (int i = 0; i < count; i++)
+    {
+        if (students[i].rollNo == roll)
+        {
+            cout << "Current Marks: " << students[i].marks << endl;
+
+            cout << "Enter New Marks: ";
+            cin >> students[i].marks;
+
+            cout << "Marks updated successfully!\n";
+            return;
+        }
+    }
+
+    cout << "\nStudent not found!\n";
+}
+
+float calculateAverage(Student students[], int count)
+{
+    if (count == 0)
+        return 0;
+
+    float total = 0;
+
+    for (int i = 0; i < count; i++)
+    {
+        total += students[i].marks;
+    }
+
+    return total / count;
+}
+
+int main()
+{
+    Student students[100];
+    int count = 0;
+    int choice;
+
+    do
+    {
+        cout << "\n\n===== STUDENT MANAGEMENT SYSTEM =====";
+        cout << "\n1. Add Student";
+        cout << "\n2. Display Students";
+        cout << "\n3. Search Student";
+        cout << "\n4. Update Marks";
+        cout << "\n5. Calculate Average Marks";
+        cout << "\n6. Exit";
+
+        cout << "\n\nEnter your choice: ";
+        cin >> choice;
+
+        switch (choice)
+        {
+            case 1:
+                addStudent(students, count);
+                break;
+
+            case 2:
+                displayStudents(students, count);
+                break;
+
+            case 3:
+                searchStudent(students, count);
+                break;
+
+            case 4:
+                updateMarks(students, count);
+                break;
+
+            case 5:
+                cout << "\nAverage Marks: "
+                     << calculateAverage(students, count);
+                break;
+
+            case 6:
+                cout << "\nProgram exited successfully.\n";
+                break;
+
+            default:
+                cout << "\nInvalid choice!";
+        }
+
+    } while (choice != 6);
+
+    return 0;
+}
