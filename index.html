@@ -3,86 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Profile Page</title>
+    <title>Student Profile</title>
 </head>
 <body>
     <header>
-        <h1>Ankit Panghal</h1>
+        <h1>Student Profile</h1>
+        <p>Always Learning. Always Building.</p>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#hobbies">Hobbies</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
-        <main>
-            <section>
-                <h2>About Me</h2>
-                <p>
-                    Hi, I'm Ankit. I am a software developer who is interested in
-                    web development and programming. I enjoy learning Java, JavaScript,
-                    HTML, CSS, and SQL.
-                </p>
-                <p>
-                    My goal is to build useful applications, improve my problem-solving
-                    skills, and grow as a software developer.
-                </p>
-            </section><br><br>
-            <img src="C:\Users\Ankit Panghal\Desktop\My Pic.jpeg" alt="My Profile Picture" width="200" height="200"><br><br>
-            <section>
-                <h2>
-                    Inroduction
-                </h2>
-                <p>Hello! My name is Ankit. I am a computer science student and an aspiring software developer. I am interested in programming and web development.
-                Currently, I am learning Java, JavaScript, HTML, CSS, and SQL. I enjoy solving programming problems and building projects to improve my technical skills.
-                My goal is to become a skilled software developer and build efficient, useful, and user-friendly applications.</p>
-            </section>
-        </main>
-        <li>
-            <h3>Skills</h3>
-            <ul>HTML</ul>
-            <ul>CSS</ul>
-            <ul>JavaScript</ul>
-            <ul>Java</ul>
-        </li>
-        <Table border="1">
-            <tr>
-                <th colspan="3">Education</th>
-            </tr>
-            <tr>
-                <th>Degree</th>
-                <th>College</th>
-                <th>Passing Year</th>
-            </tr>
-            <tr>
-                <td>MCA</td>
-                <td>Chandigarh University</td>
-                <td>2027</td>
-            </tr>
-                <td>BCA</td>
-                <td>Om Sterling Global University</td>
-                <td>2024</td>
-            <tr>
-                <td>12th</td>
-                <td>Vishav Bharti School</td>
-                <td>2019</td>
-            </tr>
-            <tr>
-                <td>10th</td>
-                <td>Indian Public School</td>
-                <td>2017</td>
-            </tr>
-        </Table>
-        <section>
-            <h2>Projects</h2>
-            <h3>Personal Portfolio Website</h3>
-            <p>A responsive personal portfolio website created using HTML and CSS. It showcases my introduction, skills, education, projects, and contact information. The project helped me understand webpage structure, semantic HTML, and basic responsive design.</p>
-            <h3>Student Management System</h3>
-            <p>A student management system designed to manage student information such as name, roll number, course, marks, and contact details. The project focuses on organizing data efficiently and provides a simple interface for viewing and managing student records.</p>
+    <main>
+        <section id="personalInformetion">
+            <h2>Personal Information</h2>
+            <div id="name">
+                <p>Name:- Ankit Panghal</p>
+            </div>
+            <div id="age">
+                <p>Age:- 22</p>
+            </div>
+            <div id="course">
+                <p>Course:- MCA</p>
+            </div>
+            <div id="specialization">
+                <p>Specialization:- Cloud Computing &amp; DevOPS</p>
+            </div>
+            <div id="college">
+                <p>College:- Chandigarh University</p>
+            </div>
+            <div id="location">
+                <p>Current Location:- Mohali, Punjab(140301) </p>
+            </div>
         </section>
-        <footer>
-            <p>Email: ankit@example.com</p>
-            <p>&copy; 2026 Ankit Panghal</p>
-        </footer>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am Ankit Panghal, an MCA student specializing in Cloud Computing and DevOps.
+            I am passionate about technology, programming, and data-driven problem solving.
+            I enjoy learning new technologies and building practical projects.
+            I have hands-on experience with Python, SQL, Power BI, Java, and cloud technologies.
+            I am continuously improving my skills to build a successful career in the tech industry.
+            </p>
+        </section>
+        <section id="skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li>Java</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>Python</li>
+                <li>PowerBi</li>
+                <li> Git &amp; GitHub</li>
+            </ul>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <div id="postGraduation">
+                <h3>MCA</h3>
+                <P>College: Chandigarh University<br>
+                Specialization: Cloud Computing & DevOps<br>
+                Expected Graduation: 2027</P>
+            </div>
+            <div id="graduation">
+                <h3>BCA</h3>
+                <p>College: Om Sterling Global University<br>
+                Graduation: 2024</p>
+            </div>
+        </section>
+        <section id="hobbies">
+            <div>
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Learning Technology</li>
+                    <li>Listening Music</li>
+                    <li>Riding</li>
+                </ul>
+            </div>
+        </section>
+        <section id="contact">
+            <div>
+                <h2>Contact Me</h2>
+                <a href="gmail.com">G-mail</a><br><br>
+                <a href="astjl,nswrjkdadglw">Phone number</a><br><br>
+                <a href="kjhgfsdfghkyqwesdfg">Github</a><br><br>
+                <a href="likujtgrfedw">LinkdIn</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Ankit. All Rights Reserved</p>
+    </footer>
 </body>
 </html>
